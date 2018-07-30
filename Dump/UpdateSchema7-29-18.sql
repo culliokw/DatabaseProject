@@ -50,7 +50,7 @@ CREATE TABLE `additional_comments` (
   `Comment` varchar(45) NOT NULL,
   PRIMARY KEY (`Comment`),
   KEY `MNumber_idx` (`MNumber`),
-  CONSTRAINT `Student_MNumber` FOREIGN KEY (`MNumber`) REFERENCES `Student` (`mnumber`)
+  CONSTRAINT `Student_MNumber` FOREIGN KEY (`MNumber`) REFERENCES `student` (`MNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -201,7 +201,7 @@ CREATE TABLE `special_needs` (
   `Needs` varchar(45) NOT NULL,
   PRIMARY KEY (`Needs`),
   KEY `MNumber_idx` (`MNumber`),
-  CONSTRAINT `MNumber` FOREIGN KEY (`MNumber`) REFERENCES `student` (`mnumber`)
+  CONSTRAINT `MNumber` FOREIGN KEY (`MNumber`) REFERENCES `student` (`MNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -305,7 +305,7 @@ CREATE TABLE `suite` (
 
 LOCK TABLES `suite` WRITE;
 /*!40000 ALTER TABLE `suite` DISABLE KEYS */;
-INSERT INTO `suite` VALUES (1,100,3),(2,400,5);
+INSERT INTO `suite` VALUES (1,100,3),(2,400,5), (3,300,4), (4,500, 2), (5,700,2);
 /*!40000 ALTER TABLE `suite` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
